@@ -1,0 +1,54 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    /*background-image: url("food.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;*/
+    margin: 0;
+}
+.content{
+
+}
+.home-content{
+    margin-top: 15%;
+    text-align: center;
+    display: block;
+}
+.site-title{
+    font-size: 3.0em;
+    margin: 1%;
+}
+.main-search{
+    border: solid grey 2px;
+    border-radius: 15px;
+    padding: 10px;
+    width: 25%;
+    min-width: 400px;
+    box-shadow: 0 0 3px grey;
+}
+.search-buttons{
+    margin: 1%;
+}
+button{
+    font-style: normal;
+}
+#search-button, #advanced-search-button{
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    width: 8%;
+    min-width: 130px;
+    text-decoration: none;
+    margin: 0 10px 0 10px;
+    
+}
+#add-recipe{
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    width: 200px;
+    height: 75px;
+    font-size: 1.3em;
+    font-weight: bold;
+    border: none;
+    border-radius: 20px;
+}
