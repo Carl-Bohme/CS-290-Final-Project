@@ -1,0 +1,30 @@
+{
+  "name": "cs-290-final-project",
+  "version": "1.0.0",
+  "description": "Ricipe site developed for final project for CS-290",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "build": "handlebars views/partials/recipeResult.handlebars -f public/recipeResultTemplate.js",
+    "prestart": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/osu-cs290-f19/final-project-carl-kobe-shuu-loc"
+  },
+  "author": "Bohme <bohmec@oregonstate.edu>, ",
+  "license": "UNLICENSED",
+  "homepage": "https://github.com/osu-cs290-f19/final-project-carl-kobe-shuu-loc#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "git": "^0.1.5",
+    "handlebars": "^4.5.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.0"
+  }
+}

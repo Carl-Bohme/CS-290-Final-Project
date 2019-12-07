@@ -1,1 +1,18 @@
-
+[
+    {
+        "name": "Recipe 1",
+        "photoURL": "",
+        "description": "This is the description for the recipe",
+        "ingredients": ["ingredient 1", "ingredient 2", "ingredient 3", "ingredient 4"],
+        "instructions": ["instruction 1", "instruction 2", "instruction 3", "instruction 4"],
+        "comments": ["comment 1", "comment 2", "comment 3", "comment 4"]
+    },
+    {
+        "name": "Recipe 2",
+        "photoURL": "",
+        "description": "This is the description for the recipe",
+        "ingredients": ["ingredient 1", "ingredient 2", "ingredient 3", "ingredient 4"],
+        "instructions": ["instruction 1", "instruction 2", "instruction 3", "instruction 4"],
+        "comments": ["comment 1", "comment 2", "comment 3", "comment 4"]
+    }
+]
