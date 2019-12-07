@@ -1,0 +1,28 @@
+<!-- Handlebars template for a single recipe result on the results page -->
+<div class="recipeResult">
+    <div id="result-short">
+        <div class="results-image-container">
+            <img src="{{photoURL}}" alt="{{short-descpription}}">
+        </div>
+        <div class="short-results-main-container">
+            <a href="#" class="short-results-title">{{title}}</a>
+            <span class="short-results-description">{{short-description}}</span>
+            <span class="short-results-time">Time Commitment: {{time}}</span>
+            <span class="short-results-difficulty">Difficulty: {{difficulty}}</span>
+        </div>
+    </div>
+    <button type="button" id="expand-button">Expand</button>
+    <div id="result-expanded" class="hidden">
+        <div class="long-decription-container">
+            <span class="long-results-description">{{long-description}}</span>
+        </div>
+        <div class="results-ingredients-container">
+            <ul class="results-ingredients-list">
+                {{#each ingredients as |item i|}}
+                    <li class="results-ingredient">{{this}}</li>
+                {{/each}}
+            </ul>
+        </div>
+        <button type="button" id="minimize-button">Minimize</button>
+    </div>
+</div>

@@ -19,6 +19,12 @@ app.get('/', function (req, res, next) {
     res.status(200).render('homePage');
 });
 
+app.get('/results', function (req, res, next) {
+    res.status(200).render('searchResults', {
+        recipes: recipeData
+    });
+});
+
 app.get('*', function (req, res) {
     res.status(404).render('404');
 });

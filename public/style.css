@@ -1,8 +1,5 @@
 body {
     font-family: 'Roboto', sans-serif;
-    /*background-image: url("food.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;*/
     margin: 0;
 }
 .content{
@@ -51,4 +48,51 @@ button{
     font-weight: bold;
     border: none;
     border-radius: 20px;
+}
+
+
+/* #################################################################################################################
+                                                Results Page Styling
+   ################################################################################################################# */
+.recipeResult{
+    margin: 10px;
+}
+
+#result-short{
+    border: solid grey 1px;
+    display: inline-block;
+}
+
+.results-image-container{
+    display: inline;
+    margin: 5px;
+}
+
+.results-image-container img{
+    max-width: 10%;
+}
+
+.short-results-main-container{
+    display: inline-block;
+    margin: 5px;
+}
+
+.short-results-time{
+    border: solid grey 1px;
+    padding: 2px;
+    margin: 5px;
+}
+
+.short-results-difficulty{
+    border: solid grey 1px;
+    padding: 2px;
+    margin: 5px;
+}
+
+#result-expanded{
+    border: solid grey 1px;
+}
+
+.hidden{
+    display: none;
 }
