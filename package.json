@@ -5,10 +5,12 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
-    "dev": "nodemon server.js",
     "build": "handlebars views/partials/recipeResult.handlebars -f public/recipeResultTemplate.js",
-    "prestart": "npm run build"
+    "prestart": "npm run build",
+    "start": "node server.js > server-log.txt 2> error-log.txt &",
+    "dev": "nodemon server.js"
+
+
   },
   "repository": {
     "type": "git",
