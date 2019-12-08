@@ -1,1 +1,4 @@
 node_modules/
+error-log.txt
+server-log.txt
+public/recipeResultTemplate.js
