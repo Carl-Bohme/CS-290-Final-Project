@@ -1,5 +1,13 @@
 <main>
-    {{#each recipes}}
-        {{> recipeResult}}
-    {{/each}}
+
+    {{{filter}}}
+
+    <section id="results">
+
+        {{#each recipes}}
+            {{> recipeResult}}
+        {{/each}}
+
+    </section>
+
 </main>

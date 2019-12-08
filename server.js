@@ -4,6 +4,7 @@ var exphbs = require('express-handlebars');
 var bodyParser = require('body-parser');
 
 var recipeData = require('./recipeData');
+var filterFoods = require('./views/partials/filterFoods');
 
 var app = express();
 var port = process.env.PORT || 3000;
@@ -21,7 +22,8 @@ app.get('/', function (req, res, next) {
 
 app.get('/results', function (req, res, next) {
     res.status(200).render('searchResults', {
-        recipes: recipeData
+        recipes: recipeData,
+        filter: filterFoods
     });
 });
 
