@@ -20,6 +20,10 @@ app.get('/', function (req, res, next) {
     res.status(200).render('homePage');
 });
 
+app.get('/addRecipe', function (req, res, next) {
+    res.status(200).render('addRecipePage');
+});
+
 app.get('/results', function (req, res, next) {
     res.status(200).render('searchResults', {
         recipes: recipeData,
