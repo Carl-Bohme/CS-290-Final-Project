@@ -3,7 +3,7 @@ body {
     margin: 0;
 }
 .content{
-
+    display: flex;
 }
 .home-content{
     margin-top: 15%;
@@ -56,6 +56,7 @@ button{
    ################################################################################################################# */
 .recipeResult{
     margin: 10px;
+    border: solid black 3px;
 }
 
 #result-short{
@@ -105,4 +106,33 @@ button{
     height: 500px;
     width: 250px;
     border: solid black 5px;
+}
+
+/* #################################################################################################################
+                                                Header Styling
+   ################################################################################################################# */
+
+a {
+    text-decoration: none;
+    color: rgb(83, 31, 31);
+}
+
+header {
+    background-color: rgb(243, 207, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-image-container img {
+    max-height: 300px;
+    max-width: 400px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.site-title {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 100px;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.342);
 }
