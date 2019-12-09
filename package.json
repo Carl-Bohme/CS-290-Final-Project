@@ -9,8 +9,6 @@
     "prestart": "npm run build",
     "start": "node server.js > server-log.txt 2> error-log.txt &",
     "dev": "nodemon server.js"
-
-
   },
   "repository": {
     "type": "git",
