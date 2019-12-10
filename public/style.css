@@ -211,3 +211,33 @@ header {
     font-size: 100px;
     text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.342);
 }
+
+/* #################################################################################################################
+                                                addRecipe Page Styling
+   ################################################################################################################# */
+
+.add-recipe-body {
+    width: 1500px;
+    height: 950px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+    border: solid black;
+    font-size: 35px;
+}
+
+.recipe-input-element {
+    border: solid black;
+    margin: 5px;
+    height: 60px;
+}
+
+.recipe-input-container {
+    margin: 10px;
+}
+
+#post-recipe {
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
