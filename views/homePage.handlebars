@@ -1,14 +1,20 @@
 <main>
-    
+
     <div class="home-content">
         <h1 class="site-title">Cookbook</h1>
-        <input type="text" class="main-search" placeholder="Search..">
-        <div class="search-buttons">
-            <button type="button" id="search-button">Search</button>
-            <button type="button" id="advanced-search-button">Advanced Search</button>
-        </div>
+        <form method="post" action="/search">
+            <div class="search-buttons">
+                <input type="text" name='searchText' class="main-search" id="text-input" placeholder="Search.."></input>
+        	</div>
+
+        	<input type="submit" value="Advance Search" id="advanced-search-button"></input>
+        </form>
+
     <div>
-    
+
+
+</form>
+
 </main>
 
 {{> addRecipeModal}}
