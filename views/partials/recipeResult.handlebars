@@ -5,13 +5,18 @@
             <img src="{{photoURL}}" alt="{{short-descpription}}">
         </div>
         <div class="short-results-main-container">
-            <a href="#" class="short-results-title">{{title}}</a>
-            <span class="short-results-description">{{short-description}}</span>
-            <span class="short-results-time">Time Commitment: {{time}}</span>
-            <span class="short-results-difficulty">Difficulty: {{difficulty}}</span>
+            <a href="#"><span class="short-results-title">{{name}}</span></a><br>
+            <div class="short-results-content">
+                <span class="short-results-description">{{short-description}}</span>
+                <div class="short-results-attributes">
+                    <span class="short-results-time">Time Commitment: <b>{{time}}</b></span>
+                    <span class="short-results-difficulty">Difficulty: <b>{{difficulty}}</b></span>
+                    <span class="short-percent-match"><b>{{percent}}%</b> Match</span>
+                </div>
+            </div>
         </div>
     </div>
-    <button type="button" id="expand-button">Expand</button>
+    <button type="button" id="expand-button">&#9660;</button>
     <div id="result-expanded" class="hidden">
         <div class="long-decription-container">
             <span class="long-results-description">{{long-description}}</span>
@@ -23,6 +28,6 @@
                 {{/each}}
             </ul>
         </div>
-        <button type="button" id="minimize-button">Minimize</button>
+        <button type="button" id="minimize-button">&#9650;</button>
     </div>
 </div>

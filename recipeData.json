@@ -8,8 +8,8 @@
         "instructions": ["instruction 1","instruction 2","instruction 3","instruction 4"],
         "comments": ["comment 1","comment 2","comment 3","comment 4"],
         "rating": "",
-        "time": "long",
-        "difficulty": "hard",
+        "time": "Long",
+        "difficulty": "Hard",
         "vegetarian": false,
         "vegan": false
     },
@@ -22,8 +22,8 @@
         "instructions": ["instruction 1", "instruction 2", "instruction 3", "instruction 4"],
         "comments": ["comment 1", "comment 2", "comment 3", "comment 4"],
         "rating": "",
-        "time": "short",
-        "difficulty": "medium",
+        "time": "Short",
+        "difficulty": "Medium",
         "vegetarian": true,
         "vegan": true
     },
@@ -36,8 +36,8 @@
         "instructions": ["instruction 1","instruction 2","instruction 3","instruction 4"],
         "comments": ["comment 1","comment 2","comment 3","comment 4"],
         "rating": "",
-        "time": "long",
-        "difficulty": "hard",
+        "time": "Long",
+        "difficulty": "Hard",
         "vegetarian": false,
         "vegan": false
     }

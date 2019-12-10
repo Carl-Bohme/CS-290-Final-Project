@@ -5,6 +5,10 @@ body {
 .content{
     display: flex;
 }
+
+/* #################################################################################################################
+                                                Home Page Styling
+   ################################################################################################################# */
 .home-content{
     margin-top: 15%;
     text-align: center;
@@ -54,40 +58,80 @@ button{
 /* #################################################################################################################
                                                 Results Page Styling
    ################################################################################################################# */
-.recipeResult{
-    margin: 10px;
-    border: solid black 3px;
+#results{
+    width: 100%;
 }
 
-#result-short{
-    border: solid grey 1px;
+.recipeResult{
+    margin: 10px;
+    width: 95%;
     display: inline-block;
 }
 
+#result-short{
+    border: solid black 3px;
+    border-radius: 5px;
+    display: flex;
+    height: 125px;
+    padding: 5px;
+}
+
 .results-image-container{
-    display: inline;
-    margin: 5px;
+    display: inline-block;
 }
 
 .results-image-container img{
-    max-width: 10%;
+    max-height: 125px;
+    max-width: 200px;
+    border-radius: 5px;
 }
 
 .short-results-main-container{
     display: inline-block;
-    margin: 5px;
+    margin: 0 10px 0 10px;
+    width: 100%;
+}
+
+.short-results-title{
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.short-results-content{
+    display: flex;
+}
+
+.short-results-description{
+    display: inline-block;
+}
+
+.short-results-attributes{
+    display: inline-flex;
+    flex-direction: column;
+    min-width: 200px;
+    text-align: center;
+    margin-left: auto;
 }
 
 .short-results-time{
+    display: inline-block;
     border: solid grey 1px;
-    padding: 2px;
-    margin: 5px;
+    padding: 2px 5px 2px 5px;
+    margin:4px;
 }
 
 .short-results-difficulty{
+    display: inline-block;
     border: solid grey 1px;
-    padding: 2px;
-    margin: 5px;
+    padding: 2px 5px 2px 5px;
+    margin: 4px;
+}
+
+.short-percent-match{
+    display: inline-block;
+    border: solid grey 1px;
+    padding: 2px 5px 2px 5px;
+    margin: 4px;
 }
 
 #result-expanded{
@@ -105,7 +149,10 @@ button{
     position: relative;
     height: 500px;
     width: 250px;
-    border: solid black 5px;
+    min-width: 175px;
+    border: solid black 3px;
+    border-radius: 5px;
+    margin: 5px;
 }
 
 /* #################################################################################################################
