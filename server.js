@@ -77,6 +77,10 @@ app.post('/search', function(req, res, next){
     if (search_result.length == 0){
         res.status(404).render('404');
     }
+    if (sub.length == 0)
+    {
+        res.status(404).render('404');
+    }
     else{ 
         res.status(200).render('searchResults', {
             recipes: search_result,
