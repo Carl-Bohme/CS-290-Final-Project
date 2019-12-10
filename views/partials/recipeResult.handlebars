@@ -9,7 +9,7 @@
             <div class="short-results-content">
                 <span class="short-results-description">{{short-description}}</span>
                 <div class="short-results-attributes">
-                    <span class="short-results-time">Time Commitment: <b>{{time}}</b></span>
+                    <span class="short-results-time">Commitment: <b>{{time}}</b></span>
                     <span class="short-results-difficulty">Difficulty: <b>{{difficulty}}</b></span>
                     <span class="short-percent-match"><b>{{percent}}%</b> Match</span>
                 </div>
@@ -18,15 +18,19 @@
     </div>
     <button type="button" id="expand-button">&#9660;</button>
     <div id="result-expanded" class="hidden">
-        <div class="long-decription-container">
-            <span class="long-results-description">{{long-description}}</span>
-        </div>
-        <div class="results-ingredients-container">
-            <ul class="results-ingredients-list">
-                {{#each ingredients as |item i|}}
-                    <li class="results-ingredient">{{this}}</li>
-                {{/each}}
-            </ul>
+        <div class="result-expanded-content">
+            <div class="long-decription-container">
+                <h3>Decription:</h3>
+                <span class="long-results-description">{{long-description}}</span>
+            </div>
+            <div class="results-ingredients-container">
+                <h3>Ingredients:</h3>
+                <ul class="results-ingredients-list">
+                    {{#each ingredients as |item i|}}
+                        <li class="results-ingredient">{{this}}</li>
+                    {{/each}}
+                </ul>
+            </div>
         </div>
         <button type="button" id="minimize-button">&#9650;</button>
     </div>

@@ -60,6 +60,7 @@ button{
    ################################################################################################################# */
 #results{
     width: 100%;
+    min-width: 650px;
 }
 
 .recipeResult{
@@ -111,6 +112,7 @@ button{
     min-width: 200px;
     text-align: center;
     margin-left: auto;
+    margin-top: -15px;
 }
 
 .short-results-time{
@@ -135,7 +137,32 @@ button{
 }
 
 #result-expanded{
-    border: solid grey 1px;
+    border: solid black 3px;
+    border-top: none;
+    border-radius: 5px;
+}
+
+.result-expanded-content{
+    display: flex;
+}
+
+.long-decription-container{
+    display: inline-block;
+    width: 70%;
+    margin: 10px;
+
+}
+
+.results-ingredients-container{
+    display: inline-block; 
+    text-align: left;
+    width: 30%;
+    margin: 10px;
+    margin-left: auto;
+}
+
+.results-ingredients-container ul{
+   
 }
 
 .hidden{

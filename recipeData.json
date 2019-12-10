@@ -15,7 +15,7 @@
     },
     {
         "name": "Recipe 2",
-        "photoURL": "",
+        "photoURL": "https://www.publicdomainpictures.net/pictures/150000/velka/delicious-meal.jpg",
         "short-description": "This is the short description for the recipe",
         "long-description": "This is the long description for the recipe. It is significantly longer then the short description and therefore is given more room than the short description.",
         "ingredients": ["ingredient 1", "ingredient 2", "ingredient 3", "ingredient 4"],
@@ -29,7 +29,7 @@
     },
     {
         "name": "Recipe 3",
-        "photoURL": "",
+        "photoURL": "https://www.publicdomainpictures.net/pictures/150000/velka/delicious-meal.jpg",
         "short-description": "This is the short description for the recipe",
         "long-description": "This is the long description for the recipe. It is significantly longer then the short description and therefore is given more room than the short description.",
         "ingredients": ["ingredient 1","ingredient 2","ingredient 3","ingredient 4"],
@@ -38,6 +38,20 @@
         "rating": "",
         "time": "Long",
         "difficulty": "Hard",
+        "vegetarian": false,
+        "vegan": false
+    },
+    {
+        "name": "Recipe 4",
+        "photoURL": "https://www.publicdomainpictures.net/pictures/150000/velka/delicious-meal.jpg",
+        "short-description": "This is the short description for the recipe",
+        "long-description": "This is the long description for the recipe. It is significantly longer then the short description and therefore is given more room than the short description.",
+        "ingredients": ["ingredient 1","ingredient 2","ingredient 3","ingredient 4"],
+        "instructions": ["instruction 1","instruction 2","instruction 3","instruction 4"],
+        "comments": ["comment 1","comment 2","comment 3","comment 4"],
+        "rating": "",
+        "time": "Moderate",
+        "difficulty": "Easy",
         "vegetarian": false,
         "vegan": false
     }
