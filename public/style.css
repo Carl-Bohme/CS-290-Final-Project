@@ -35,14 +35,19 @@ button{
     font-style: normal;
 }
 #search-button, #advanced-search-button{
-    border: none;
-    border-radius: 5px;
+ 	border:none;
+    border-radius: 20px;
     padding: 5px;
     width: 8%;
     min-width: 130px;
     text-decoration: none;
     margin: 0 10px 0 10px;
-    
+}
+#advanced-search-button:hover
+{
+	border-style: solid;
+    border-color:#2F4F4F;
+    border-width: 2px;
 }
 #add-recipe{
     position: fixed;
@@ -52,8 +57,21 @@ button{
     height: 75px;
     font-size: 1.3em;
     font-weight: bold;
-    border: none;
+
+    box-shadow: 5px 5px 20px;
+
+    transition-property: all;
+    transition-duration: 500ms;
+    transition-timing-function: ease;
     border-radius: 20px;
+}
+#add-recipe:hover
+{
+	transform: scale(1.2);
+	border-style: solid;
+    border-color: #2F4F4F;
+    border-width: 3px;
+
 }
 
 
