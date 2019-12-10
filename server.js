@@ -41,14 +41,13 @@ app.post('/search', function(req, res, next){
     console.log("Advance Search Button Pressed");
     var text_input = req.body.searchText;
     console.log("Your input is: " + text_input);
-    console.log(recipeData.length);
     var search_result = [];
     var sub = text_input.split(" ");
     var result_added = false;
-    if (sub.length != 0){
+    if (sub.length != 0 && text_input != ""){
         //filter text
         
-          for (var i = 0; i < recipeData.length; i++) {
+        for (var i = 0; i < recipeData.length; i++) {
             result_added = false;
             for (var j = 0; j < recipeData[i].ingredients.length; j++){
                 console.log(recipeData[i].ingredients[j]);
@@ -70,23 +69,26 @@ app.post('/search', function(req, res, next){
                 } 
             }
  
-          }
+        }
 
-    }
-    
-    if (search_result.length == 0){
-        res.status(404).render('404');
-    }
-    if (sub.length == 0)
-    {
-        res.status(404).render('404');
-    }
-    else{ 
+        if (search_result.length == 0){
+        	res.status(404).render('404');
+    	}
+    	
+    	else{ 
         res.status(200).render('searchResults', {
             recipes: search_result,
             filter: filterFoods
-        })
+        	})
+    	}
+
+
     }
+    else
+    {
+    	res.status(200).render('homePage');
+    }
+    
 
 });
 
