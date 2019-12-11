@@ -1,4 +1,3 @@
-var recipesArray = [];
 
 // Function to show Expanded result when expand button is clicked
 function showExpandedResult() {
@@ -19,11 +18,6 @@ function hideExpandedResult() {
 
 // Event listener for button functionallity
 window.addEventListener('DOMContentLoaded', function () {
-
-    //var recipeResults = document.getElementsByClassName('recipeResult');
-    //for (var i = 0; i < recipeResults.length; i++) {
-    //    recipesArray.push(parsePostElem(recipeResults[i]));
-    //}
 
     var expandButton = document.getElementById('expand-button');
     if (expandButton) {
