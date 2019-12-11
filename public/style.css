@@ -160,34 +160,10 @@ button{
     margin: 4px;
 }
 
-.result-expanded{
-    border: solid black 3px;
-    border-top: none;
-    border-radius: 5px;
-    position: relative;
-}
-
-.result-expanded-content{
-    display: flex;
-    background-color: beige;
-}
-
 .long-decription-container{
     display: inline-block;
-    width: 70%;
+    width: 100%;
     margin: 10px;
-
-}
-
-.results-ingredients-container{
-    display: inline-block;
-    text-align: left;
-    width: 30%;
-    margin: 10px;
-    margin-left: auto;
-}
-
-.results-ingredients-container ul{
 
 }
 
@@ -195,8 +171,19 @@ button{
     display: none;
 }
 
-.recipeResult:hover #result-expanded {
+.recipeResult:active #result-expanded {
+    border: none;
     display: contents;
+}
+
+.recipeResult:active #result-short{
+    border: none;
+}
+
+.recipeResult:active{
+    border: solid black 3px;
+    border-radius: 5px;
+    background-color: beige;
 }
 
 /* #################################################################################################################

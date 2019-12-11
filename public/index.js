@@ -28,7 +28,7 @@ function hideExpandedResult(i) {
 
 
 // Function to Insert Recipe into Dom 
-function insertRecipe(name, shortDescription, longDescription ,photoURL, time, difficulty, percent, vegetarian, vegan, id) {
+function insertRecipe(name, shortDescription, longDescription, photoURL, time, difficulty, percent, vegetarian, vegan, id) {
 
     var recipeContent = {
         name: name,
