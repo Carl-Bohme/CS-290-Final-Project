@@ -79,7 +79,7 @@ app.get('/results', function (req, res, next) {
 });
 
 // Middleware function to handle viewing a recipe page
-app.get('/recipe/:id', function (req, res, next) {
+app.get('/:id', function (req, res, next) {
 	var id = Math.floor(req.params.id); //Saves id entered in url rounded down if float
 	if (id >= 0 && id < Object.keys(recipeData).length) {
 		res.status(200).render('recipePage', recipeData[id]);

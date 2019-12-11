@@ -7,7 +7,7 @@
               <div class = "recipe-ingredients">
                 <ul>
                   {{#each ingredients as |item i|}}
-                        <li class="recipe-ingredients">{{this}}</li>
+                        <li class="recipe-ingredient-content">{{this}}</li>
                   {{/each}}
                 </ul>
               </div>
@@ -32,7 +32,7 @@
               <div class="recipe-instructions">
                 <ul>
                   {{#each instructions as |item i|}}
-                        <li class="recipe-instructions">{{this}}</li>
+                        <li class="recipe-instruction-content">{{this}}</li>
                   {{/each}}
                 </ul>
               </div>
@@ -40,10 +40,12 @@
         </div>
 
         <div class = "recipe-comments-container">
-          <h2> Comments </h2>
-            <!--{{#each comments}}
-               {{> comment}}
-            {{/each}}-->
+          <h2>Comments</h2>
+            {{#each comments as |item i|}}
+               <div class="comment">
+                 <span class="comment-content">{{this}}</span>
+               </div>
+            {{/each}}
         </div>
     </div>
 
