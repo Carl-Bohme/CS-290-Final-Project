@@ -184,7 +184,7 @@ button{
     display: none;
 }
 
-.recipeResult:hover #result-expanded {
+.recipeResult:active #result-expanded {
     display: contents;
 }
 
