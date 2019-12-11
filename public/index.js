@@ -5,7 +5,6 @@ var completeRecipeList = [];
 
 // Function to show Expanded result when expand button is clicked
 function showExpandedResult(i) {
-    console.log(i);
     var expandedResults = document.getElementsByClassName('result-expanded');
     expandedResults[i].classList.remove('hidden');
     var expandButtons = document.getElementsByClassName('expand-button');
@@ -162,6 +161,8 @@ function parseRecipe(recipeElem){
     return recipe;
 }
 
+//showExpandedResult(0);
+//showExpandedResult(2);
 
 // Event listener for button functionallity
 window.addEventListener('DOMContentLoaded', function () {
@@ -172,27 +173,18 @@ window.addEventListener('DOMContentLoaded', function () {
     }
 
 
-
-    //showExpandedResult(0);
-
-
+    // Event listiner for expand buttons
     var expandButtons = document.getElementsByClassName('expand-button');
-    console.log(expandButtons.length);
     for (var i = 0; i < expandButtons.length; i++) {
-        if (expandButtons[i]) {
-            console.log(expandButtons[i]);
-            expandButtons[i].addEventListener('click', showExpandedResult(i));
-        }
+        expandButtons[i].addEventListener('click', showExpandedResult(i));
     }
-    //var expandButtons = document.getElementsById('expand-button');
-    //if (expandButtons[i]) {
-    //    expandButtons[i].addEventListener('click', showExpandedResult(i));
-    //}
+    
+    // Event listiner for minimize buttons
+    var minimizeButtons = document.getElementsByClassName('expand-button');
+    for (var i = 0; i < minimizeButtons.length; i++) {
+       minimizeButtons[i].addEventListener('click', hideExpandedResult(i));
+    }
 
-    var minimizeButton = document.getElementById('minimize-button');
-    if (minimizeButton) {
-        minimizeButton.addEventListener('click', hideExpandedResult);
-    }
 
     var filterButton = document.getElementById('filter-submit-button');
     if (filterButton) {
