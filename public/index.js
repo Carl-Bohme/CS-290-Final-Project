@@ -4,7 +4,8 @@ var completeRecipeList = [];
 
 
 // Function to show Expanded result when expand button is clicked
-function showExpandedResult(i) {
+function showExpandedResult() {
+    console.log("Expand Called")
     var expandedResults = document.getElementsByClassName('result-expanded');
     expandedResults[i].classList.remove('hidden');
     var expandButtons = document.getElementsByClassName('expand-button');
@@ -16,6 +17,7 @@ function showExpandedResult(i) {
 
 // Function to hide Expanded result when minimze button is clicked
 function hideExpandedResult(i) {
+    console.log("Minimize Called")
     var expandedResults = document.getElementsByClassName('result-expanded');
     expandedResults[i].classList.add('hidden');
     var expandButtons = document.getElementsByClassName('expand-button');
@@ -172,11 +174,11 @@ window.addEventListener('DOMContentLoaded', function () {
         completeRecipeList.push(parseRecipe(recipes[i]));
     }
 
-
     // Event listiner for expand buttons
     var expandButtons = document.getElementsByClassName('expand-button');
     for (var i = 0; i < expandButtons.length; i++) {
-        expandButtons[i].addEventListener('click', showExpandedResult(i));
+        console.log("Event Listener Made")
+        expandButtons[i].onclick=showExpandedResult();
     }
     
     // Event listiner for minimize buttons

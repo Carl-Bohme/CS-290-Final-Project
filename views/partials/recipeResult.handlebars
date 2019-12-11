@@ -1,9 +1,12 @@
 <!-- Handlebars template for a single recipe result on the results page -->
 <div class="recipeResult" data-time="{{time}}" data-difficulty="{{difficulty}}" data-vegetarian="{{vegetarian}}" data-vegan="{{vegan}}" data-name="{{name}}" data-percent="{{percent}}" data-short-description="{{shortDescription}}" data-long-discription="{{longDescription}}" data-photoURL="{{photoURL}}">
+    
     <div id="result-short">
+       
         <div class="results-image-container">
             <img src="{{photoURL}}" alt="{{shortDescription}}">
         </div>
+       
         <div class="short-results-main-container">
             <a href="#"><span class="short-results-title">{{name}}</span></a><br>
             <div class="short-results-content">
@@ -15,14 +18,17 @@
                 </div>
             </div>
         </div>
+
     </div>
-    <button type="button" id="expand-button" class="expand-button">&#9660;</button>
+    
     <div id="result-expanded" class="hidden result-expanded">
+        
         <div class="result-expanded-content">
             <div class="long-decription-container">
                 <h3>Decription:</h3>
                 <span class="long-results-description">{{longDescription}}</span>
             </div>
+
             <div class="results-ingredients-container">
                 <h3>Ingredients:</h3>
                 <ul class="results-ingredients-list">
@@ -31,7 +37,8 @@
                     {{/each}}
                 </ul>
             </div>
+
         </div>
     </div>
-    <button type="button" id="minimize-button" class="minimize-button hidden">&#9650;</button>
+
 </div>

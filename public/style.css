@@ -160,10 +160,11 @@ button{
     margin: 4px;
 }
 
-#result-expanded{
+.result-expanded{
     border: solid black 3px;
     border-top: none;
     border-radius: 5px;
+    position: relative;
 }
 
 .result-expanded-content{
@@ -192,6 +193,10 @@ button{
 
 .hidden{
     display: none;
+}
+
+.recipeResult:hover #result-expanded {
+    display: contents;
 }
 
 /* #################################################################################################################
