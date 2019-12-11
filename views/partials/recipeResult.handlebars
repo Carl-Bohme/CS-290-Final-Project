@@ -1,5 +1,5 @@
 <!-- Handlebars template for a single recipe result on the results page -->
-<div class="recipeResult" data-time="{{time}}" data-difficulty="{{difficulty}}" data-vegetarian="{{vegetarian}}" data-vegan="{{vegan}}" data-name="{{name}}" data-percent="{{percent}}" data-short-description="{{shortDescription}}" data-long-discription="{{longDescription}}" data-photoURL="{{photoURL}}" data-id="{{id}}">
+<div class="recipeResult" data-time="{{time}}" data-difficulty="{{difficulty}}" data-vegetarian="{{vegetarian}}" data-vegan="{{vegan}}" data-name="{{name}}" data-percent="{{percent}}" data-short-description="{{shortDescription}}" data-long-description="{{longDescription}}" data-ingredients="{{ingredients}}" data-photoURL="{{photoURL}}" data-id="{{id}}">
     <div id="result-short">
        
         <div class="results-image-container">
@@ -27,17 +27,8 @@
                 <h3>Decription:</h3>
                 <span class="long-results-description">{{longDescription}}</span>
             </div>
-
-            <div class="results-ingredients-container">
-                <h3>Ingredients:</h3>
-                <ul class="results-ingredients-list">
-                    {{#each ingredients as |item i|}}
-                        <li class="results-ingredient">{{this}}</li>
-                    {{/each}}
-                </ul>
-            </div>
-
         </div>
+
     </div>
 
 </div>

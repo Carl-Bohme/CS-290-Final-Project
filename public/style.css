@@ -174,22 +174,11 @@ button{
 
 .long-decription-container{
     display: inline-block;
-    width: 70%;
+    width: 100%;
     margin: 10px;
 
 }
 
-.results-ingredients-container{
-    display: inline-block;
-    text-align: left;
-    width: 30%;
-    margin: 10px;
-    margin-left: auto;
-}
-
-.results-ingredients-container ul{
-
-}
 
 .hidden{
     display: none;
