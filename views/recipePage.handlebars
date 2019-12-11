@@ -2,13 +2,24 @@
 
 <main class="content">
 
+    <div class = "recipe-ingredients-container">
+              <h2>Ingredients</h2>
+              <div class = "recipe-ingredients">
+                <ul>
+                  {{#each ingredients as |item i|}}
+                        <li class="recipe-ingredients">{{this}}</li>
+                  {{/each}}
+                </ul>
+              </div>
+            </div>
+
     <div class="recipe-container">
         <div class="recipe-title-container">
             <h1 class="recipe-title">{{name}}</h1>
       <!--  <h1 class="recipe-title">{{name}} </h2> -->
-        </div>
-        <div class="recipe-image-container">
-          <img src="{{photoURL}}" alt="{{name}}">
+            <div class="recipe-image-container">
+              <img src="{{photoURL}}" alt="{{name}}">
+            </div>
         </div>
         <div class="recipe-information-container">
             <!-- Dynamically allocate list -->
@@ -26,18 +37,18 @@
                 </ul>
               </div>
             </div>
-            <div class = "recipe-ingredients-container">
-              <h2>Ingredients</h2>
-              <div class = "recipe-ingredients">
-                <ul>
-                  {{#each ingredients as |item i|}}
-                        <li class="recipe-ingredients">{{this}}</li>
-                  {{/each}}
-                </ul>
-              </div>
-            </div>
-            <div class="recipe-detail-container">
-              <h2>Time</h2>
+        </div>
+
+        <div class = "recipe-comments-container">
+          <h2> Comments </h2>
+            <!--{{#each comments}}
+               {{> comment}}
+            {{/each}}-->
+        </div>
+    </div>
+
+    <div class="recipe-detail-container">
+              <h2>Details:</h2>
               <div class="recipe-time-container">
                 <p class="recipe-time">Time: {{time}}</p>
               </div>
@@ -48,13 +59,5 @@
                 <p class="recipe-rating">Rating: {{rating}}</p>
               </div>
             </div>
-        </div>
-        <div class = "recipe-comments-container">
-          <h2> Comments </h2>
-            <!--{{#each comments}}
-               {{> comment}}
-            {{/each}}-->
-        </div>
-    </div>
 
 </main>
