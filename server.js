@@ -75,6 +75,10 @@ app.get('/results', function (req, res, next) {
     });
 });
 
+app.get('/recipe', function (req, res, next) {
+  res.status(200).render('recipePage');
+});
+
 app.post('/search', function(req, res, next){
 		var new_order = [];
 		for (var i = 0; i < recipeData.length; i++)

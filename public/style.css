@@ -179,7 +179,7 @@ button{
 }
 
 .results-ingredients-container{
-    display: inline-block; 
+    display: inline-block;
     text-align: left;
     width: 30%;
     margin: 10px;
@@ -187,7 +187,7 @@ button{
 }
 
 .results-ingredients-container ul{
-   
+
 }
 
 .hidden{
@@ -256,8 +256,6 @@ header {
 .header-image-container img {
     max-height: 300px;
     max-width: 400px;
-    margin-left: 100px;
-    margin-right: 100px;
 }
 
 .site-title {
@@ -294,4 +292,98 @@ header {
     height: 100px;
     margin-left: auto;
     margin-right: auto;
+}
+
+/* #################################################################################################################
+                                                recipe page
+   ################################################################################################################# */
+
+
+.recipe-container {
+  width: 100%;
+  height: auto;
+}
+
+.recipe-title-container {
+  text-align: center;
+  font-size: 25px;
+  width: auto;
+  height: auto;
+  background-color: white;
+  border: solid black 3px;
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-bottom: 25px;
+  border-radius: 25px;
+}
+
+.recipe-image-container img {
+  display: block;
+  max-width: 500px;
+  max-height: 500px;
+  width: auto;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 25px
+}
+
+.recipe-information-container {
+  margin-right: auto;
+  float: left;
+  width: 100%;
+  height: auto;
+}
+
+.recipe-description-container {
+  float: right;
+  max-width: 50%;
+  width: auto;
+  height: auto;
+  background-color: brown;
+  margin: 25px;
+  border: solid black 3px;
+  border-radius: 25px;
+}
+
+.recipe-instructions-container {
+  float: right;
+  margin: 25px;
+  border: solid black 3px;
+  border-radius: 25px;
+  max-width: 50%;
+  width: auto;
+  height: auto;
+  background-color:green;
+}
+
+.recipe-ingredients-container {
+  margin: 25px;
+  border: solid black 3px;
+  border-radius: 25px;
+  max-width: 40%;
+  width: auto;
+  height: auto;
+  background-color: white;
+}
+
+.recipe-detail-container {
+  margin: 25px;
+  border: solid black 3px;
+  border-radius: 25px;
+  max-width: 25%;
+  width: auto;
+  height: auto;
+  background-color: teal;
+}
+
+h2, h1 {
+  font-family: Roboto;
+  text-align: center;
+  color: rgb(83, 31, 31);
+}
+
+.recipe-comments-container {
+  height: auto;
+  width: 100%;
 }
