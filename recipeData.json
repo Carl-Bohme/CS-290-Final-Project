@@ -12,7 +12,8 @@
         "time": "Long",
         "difficulty": "Hard",
         "vegetarian": "false",
-        "vegan": "false"
+        "vegan": "false",
+        "id": "0"
     },
     {
         "name": "Recipe 2",
@@ -27,7 +28,8 @@
         "time": "Short",
         "difficulty": "Moderate",
         "vegetarian": "true",
-        "vegan": "true"
+        "vegan": "true",
+        "id": "1"
     },
     {
         "name": "Recipe 3",
@@ -42,6 +44,7 @@
         "time": "Long",
         "difficulty": "Hard",
         "vegetarian": "false",
-        "vegan": "false"
+        "vegan": "false",
+        "id": "2"
     }
 ]

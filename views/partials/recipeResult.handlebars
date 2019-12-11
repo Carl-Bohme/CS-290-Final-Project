@@ -1,11 +1,11 @@
 <!-- Handlebars template for a single recipe result on the results page -->
-<div class="recipeResult" data-time="{{time}}" data-difficulty="{{difficulty}}" data-vegetarian="{{vegetarian}}" data-vegan="{{vegan}}" data-name="{{name}}" data-percent="{{percent}}" data-short-description="{{shortDescription}}" data-long-discription="{{longDescription}}" data-photoURL="{{photoURL}}">
+<div class="recipeResult" data-time="{{time}}" data-difficulty="{{difficulty}}" data-vegetarian="{{vegetarian}}" data-vegan="{{vegan}}" data-name="{{name}}" data-percent="{{percent}}" data-short-description="{{shortDescription}}" data-long-discription="{{longDescription}}" data-photoURL="{{photoURL}}" data-id="{{id}}">
     <div id="result-short">
         <div class="results-image-container">
             <img src="{{photoURL}}" alt="{{shortDescription}}">
         </div>
         <div class="short-results-main-container">
-            <a href="#"><span class="short-results-title">{{name}}</span></a><br>
+            <a href="/{{id}}"><span class="short-results-title">{{name}}</span></a><br>
             <div class="short-results-content">
                 <span class="short-results-description">{{shortDescription}}</span>
                 <div class="short-results-attributes">

@@ -26,7 +26,7 @@ function hideExpandedResult(i) {
 
 
 // Function to Insert Recipe into Dom 
-function insertRecipe(name, shortDescription, longDescription ,photoURL, time, difficulty, percent, vegetarian, vegan) {
+function insertRecipe(name, shortDescription, longDescription ,photoURL, time, difficulty, percent, vegetarian, vegan, id) {
 
     var recipeContent = {
         name: name,
@@ -37,7 +37,8 @@ function insertRecipe(name, shortDescription, longDescription ,photoURL, time, d
         difficulty: difficulty,
         percent: percent,
         vegetarian: vegetarian,
-        vegan: vegan
+        vegan: vegan,
+        id: id
       };
 
 
@@ -62,7 +63,7 @@ function filterRecipes() {
 
     // Add all original recipes back to the dom
     completeRecipeList.forEach(function (recipe) {
-        insertRecipe(recipe.name, recipe.shortDescription, recipe.longDescription, recipe.photoURL, recipe.time, recipe.difficulty, recipe.percent, recipe.vegetarian, recipe.vegan);
+        insertRecipe(recipe.name, recipe.shortDescription, recipe.longDescription, recipe.photoURL, recipe.time, recipe.difficulty, recipe.percent, recipe.vegetarian, recipe.vegan, recipe.id);
     });
 
 
@@ -155,7 +156,8 @@ function parseRecipe(recipeElem){
         vegetarian: recipeElem.getAttribute('data-vegetarian'),
         vegan: recipeElem.getAttribute('data-vegan'),
         percent: recipeElem.getAttribute('data-percent'),
-        photoURL: recipeElem.getAttribute('data-photoURL')
+        photoURL: recipeElem.getAttribute('data-photoURL'),
+        id: recipeElem.getAttribute('data-id')
     }
     
     return recipe;
