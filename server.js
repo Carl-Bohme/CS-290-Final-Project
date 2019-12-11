@@ -76,7 +76,12 @@ app.get('/results', function (req, res, next) {
 });
 
 app.post('/search', function(req, res, next){
-    console.log("Advance Search Button Pressed");
+		var new_order = [];
+		for (var i = 0; i < recipeData.length; i++)
+		{
+			new_order.push(recipeData[i]);
+		}
+		console.log("Advance Search Button Pressed");
     var text_input = req.body.searchText;
     console.log("Your input is: " + text_input);
     //var search_result = [];
@@ -108,7 +113,7 @@ app.post('/search', function(req, res, next){
 
 
 
-	    var search_result = bubbleSort(ingre_match, recipeData);
+	    var search_result = bubbleSort(ingre_match, new_order);
 	    console.log("Sorted result is: " + ingre_match);
 
 			for (var k = 0; k < search_result.length; k++)
@@ -124,9 +129,9 @@ app.post('/search', function(req, res, next){
 		//if the user enter nothing part
     else
     {
-			for (var k = 0; k < search_result.length; k++)
+			for (var k = 0; k < recipeData.length; k++)
 			{
-				search_result[k].percent = 0;
+				recipeData[k].percent = 0;
 			}
     	res.status(200).render('searchResults', {
 	   	recipes: recipeData,
