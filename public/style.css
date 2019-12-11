@@ -160,18 +160,6 @@ button{
     margin: 4px;
 }
 
-.result-expanded{
-    border: solid black 3px;
-    border-top: none;
-    border-radius: 5px;
-    position: relative;
-}
-
-.result-expanded-content{
-    display: flex;
-    background-color: beige;
-}
-
 .long-decription-container{
     display: inline-block;
     width: 100%;
@@ -179,13 +167,23 @@ button{
 
 }
 
-
 .hidden{
     display: none;
 }
 
 .recipeResult:active #result-expanded {
+    border: none;
     display: contents;
+}
+
+.recipeResult:active #result-short{
+    border: none;
+}
+
+.recipeResult:active{
+    border: solid black 3px;
+    border-radius: 5px;
+    background-color: beige;
 }
 
 /* #################################################################################################################
