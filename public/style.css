@@ -276,29 +276,54 @@ header {
    ################################################################################################################# */
 
 .add-recipe-body {
-    width: 1500px;
-    height: 950px;
+    background-color: white;
+    width: 1200px;
+    height: min-content;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 40px;
     border: solid black;
     font-size: 35px;
+    padding: 20px;
 }
 
 .recipe-input-element {
-    border: solid black;
-    margin: 5px;
     height: 60px;
+    display: flex;
+    padding: 3%;
+}
+
+#recipe-text-input {
+    margin: 10px;
+    flex: 1;
 }
 
 .recipe-input-container {
     margin: 10px;
 }
 
-#post-recipe {
+.add-recipe-button-container {
+    text-align: center;
+}
+
+.add-recipe-button {
+    margin: 20px;
+    width: 75%;
     height: 100px;
-    margin-left: auto;
-    margin-right: auto;
+    border-color:white;
+    border-radius: 5px;
+    background-color: darkgoldenrod;
+    color: beige;
+    padding: 5px;
+    font-size: 40px;
+}
+
+.add-recipe-button:hover {
+	border-style: solid;
+    border-color:#2F4F4F;
+    border-width: 2px;
+    background-color: lightgrey;
+    color: black;
 }
 
 /* #################################################################################################################
