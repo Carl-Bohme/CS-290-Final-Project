@@ -121,8 +121,13 @@ app.post('/search', function(req, res, next){
 	      filter: filterFoods
       })
     }
+		//if the user enter nothing part
     else
     {
+			for (var k = 0; k < search_result.length; k++)
+			{
+				search_result[k].percent = 0;
+			}
     	res.status(200).render('searchResults', {
 	   	recipes: recipeData,
 	    filter: filterFoods
