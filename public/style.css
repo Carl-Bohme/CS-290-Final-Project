@@ -95,6 +95,7 @@ button{
     display: flex;
     height: 125px;
     padding: 5px;
+    background-color: beige;
 }
 
 .results-image-container{
@@ -137,21 +138,24 @@ button{
 
 .short-results-time{
     display: inline-block;
-    border: solid grey 1px;
+    border: solid darkgoldenrod 2px;
+    border-radius: 2px;
     padding: 2px 5px 2px 5px;
     margin:4px;
 }
 
 .short-results-difficulty{
     display: inline-block;
-    border: solid grey 1px;
+    border: solid darkgoldenrod 2px;
+    border-radius: 2px;
     padding: 2px 5px 2px 5px;
     margin: 4px;
 }
 
 .short-percent-match{
     display: inline-block;
-    border: solid grey 1px;
+    border: solid darkgoldenrod 2px;
+    border-radius: 2px;
     padding: 2px 5px 2px 5px;
     margin: 4px;
 }
@@ -199,7 +203,38 @@ button{
     min-width: 175px;
     border: solid black 3px;
     border-radius: 5px;
+    margin: 10px;
+    background-color: beige;
+}
+
+.filter-title{
+    margin: 15px;
+}
+
+.filter-input-container{
     margin: 5px;
+}
+
+.filter-submit{
+    text-align: center;
+    margin: 10px;
+}
+
+#filter-submit-button{
+    width: 75%;
+    border-color:white;
+    border-radius: 5px;
+    background-color: darkgoldenrod;
+    color: beige;
+    padding: 5px;
+}
+#filter-submit-button:hover
+{
+	border-style: solid;
+    border-color:#2F4F4F;
+    border-width: 2px;
+    background-color: lightgrey;
+    color: black;
 }
 
 /* #################################################################################################################
