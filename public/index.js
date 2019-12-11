@@ -4,24 +4,25 @@ var completeRecipeList = [];
 
 
 // Function to show Expanded result when expand button is clicked
-function showExpandedResult() {
-    var showExpandedResult = document.getElementById('result-expanded');
-    showExpandedResult.classList.remove('hidden');
-    var expandButton = document.getElementById('expand-button');
-    expandButton.classList.add('hidden');
-    var expandButton = document.getElementById('minimize-button');
-    expandButton.classList.remove('hidden');
+function showExpandedResult(i) {
+    console.log(i);
+    var expandedResults = document.getElementsByClassName('result-expanded');
+    expandedResults[i].classList.remove('hidden');
+    var expandButtons = document.getElementsByClassName('expand-button');
+    expandButtons[i].classList.add('hidden');
+    var minimizeButtons = document.getElementsByClassName('minimize-button');
+    minimizeButtons[i].classList.remove('hidden');
 }
 
 
 // Function to hide Expanded result when minimze button is clicked
-function hideExpandedResult() {
-    var hideExpandedResult = document.getElementById('result-expanded');
-    hideExpandedResult.classList.add('hidden');
-    var expandButton = document.getElementById('expand-button');
-    expandButton.classList.remove('hidden');
-    var expandButton = document.getElementById('minimize-button');
-    expandButton.classList.add('hidden');
+function hideExpandedResult(i) {
+    var expandedResults = document.getElementsByClassName('result-expanded');
+    expandedResults[i].classList.add('hidden');
+    var expandButtons = document.getElementsByClassName('expand-button');
+    expandButtons[i].classList.remove('hidden');
+    var minimizeButtons = document.getElementsByClassName('minimize-button');
+    minimizeButtons[i].classList.add('hidden');
 }
 
 
@@ -66,7 +67,6 @@ function filterRecipes() {
     });
 
 
-    console.log("completeRecipeList.length:" + completeRecipeList.length);
 
     // Time Filtering
     if(!document.getElementById('filter-time-short').checked){
@@ -121,7 +121,6 @@ function filterRecipes() {
     }
 
 
-    console.log(document.getElementById('filter-diet').value);
     // Dietary Filtering
     if(document.getElementById('filter-diet').value != ""){
  
@@ -171,12 +170,24 @@ window.addEventListener('DOMContentLoaded', function () {
     for (var i = 0; i < recipes.length; i++) {
         completeRecipeList.push(parseRecipe(recipes[i]));
     }
-    console.log("completeRecipeList.length:" + completeRecipeList.length);
 
-    var expandButton = document.getElementById('expand-button');
-    if (expandButton) {
-        expandButton.addEventListener('click', showExpandedResult);
+
+
+    //showExpandedResult(0);
+
+
+    var expandButtons = document.getElementsByClassName('expand-button');
+    console.log(expandButtons.length);
+    for (var i = 0; i < expandButtons.length; i++) {
+        if (expandButtons[i]) {
+            console.log(expandButtons[i]);
+            expandButtons[i].addEventListener('click', showExpandedResult(i));
+        }
     }
+    //var expandButtons = document.getElementsById('expand-button');
+    //if (expandButtons[i]) {
+    //    expandButtons[i].addEventListener('click', showExpandedResult(i));
+    //}
 
     var minimizeButton = document.getElementById('minimize-button');
     if (minimizeButton) {

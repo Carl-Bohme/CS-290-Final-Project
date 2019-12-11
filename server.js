@@ -60,14 +60,17 @@ app.use(express.urlencoded()); // to support URL-encoded bodies
 
 app.use(express.static('public'));
 
+// Middleware function to handle viewing home page
 app.get('/', function (req, res, next) {
     res.status(200).render('homePage');
 });
 
+// Middleware function to handle viewing recipe adding page
 app.get('/addRecipe', function (req, res, next) {
     res.status(200).render('addRecipePage');
 });
 
+// Middleware function to handle viewing results page
 app.get('/results', function (req, res, next) {
     res.status(200).render('searchResults', {
         recipes: recipeData,
@@ -75,10 +78,17 @@ app.get('/results', function (req, res, next) {
     });
 });
 
-app.get('/recipe', function (req, res, next) {
-  res.status(200).render('recipePage');
+// Middleware function to handle viewing a recipe page
+app.get('/recipe/:id', function (req, res, next) {
+	var id = Math.floor(req.params.id); //Saves id entered in url rounded down if float
+	if (id >= 0 && id < Object.keys(recipeData).length) {
+		res.status(200).render('recipePage', recipeData[id]);
+	} else {
+		next();
+	}
 });
 
+// Middleware function to Searching
 app.post('/search', function(req, res, next){
 		var new_order = [];
 		for (var i = 0; i < recipeData.length; i++)
@@ -145,6 +155,7 @@ app.post('/search', function(req, res, next){
 
 });
 
+// Middleware function to handle requests not dealt with above
 app.get('*', function (req, res) {
     res.status(404).render('404');
 });
