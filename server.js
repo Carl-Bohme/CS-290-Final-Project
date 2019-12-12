@@ -18,17 +18,6 @@ function get_percentage(a1, a2)
 	var match = 0;
 	console.log("a1: " + a1);
 	console.log	("a2: " + a2);
-	/*for (var i = 0; i < a1.length; i++)
-	{
-		for (var j = 0; j < a2.length; i++)
-		{
-			if (a1[i].toLowerCase().includes(a2[j].toLowerCase()))
-			{
-				match += 1;
-			}
-		}
-	}
-	*/
 	return (match/a2.length)*100;
 }
 
