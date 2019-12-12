@@ -437,6 +437,33 @@ h2, h1 {
     margin: 15px;
 }
 
+.comment-post-container {
+  position: relative;
+  margin-top: 25px;
+  height: 150px;
+}
+
+.comment-input {
+  width: 99%;
+  height: 100px;
+  border-radius: 5px;
+}
+textarea {
+  resize:none;
+  outline: none;
+  border: solid gray 1px
+}
+
+.post-button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 35px;
+  width: 80px;
+  border-radius: 5px;
+  outline: none;
+}
+
 /* #################################################################################################################
                                                 404 Page
    ################################################################################################################# */
