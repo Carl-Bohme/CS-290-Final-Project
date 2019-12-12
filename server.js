@@ -168,6 +168,8 @@ app.post('/addRecipeToFile', function(req, res, next){
 	instructionsArray = instructionsString.split(",");
 
 
+	console.log("recipe-time: " + req.body.recipeTime);
+
 	var newRecipeData = {
 		"name": req.body.recipeName,
 		"photoURL": req.body.recipePhotoURL,
