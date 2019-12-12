@@ -16,7 +16,6 @@
     <div class="recipe-container">
         <div class="recipe-title-container">
             <h1 class="recipe-title">{{name}}</h1>
-      <!--  <h1 class="recipe-title">{{name}} </h2> -->
             <div class="recipe-image-container">
               <img src="{{photoURL}}" alt="{{name}}">
             </div>
@@ -65,13 +64,10 @@
     <div class="recipe-detail-container">
               <h2>Details:</h2>
               <div class="recipe-time-container">
-                <p class="recipe-time">Time: {{time}}</p>
+                <p class="recipe-time">Time: <b>{{time}}</b></p>
               </div>
               <div class="recipe-difficulty-container">
-                <p class="recipe-difficulty">Difficulty: {{difficulty}}</p>
-              </div>
-              <div class="recipe-rating-container">
-                <p class="recipe-rating">Rating: {{rating}}</p>
+                <p class="recipe-difficulty">Difficulty: <b>{{difficulty}}</b></p>
               </div>
             </div>
 

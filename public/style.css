@@ -263,30 +263,42 @@ header {
    ################################################################################################################# */
 
 .add-recipe-body {
-    background-color: white;
-    width: 1200px;
+    background-color: beige;
+    width: 50%;
+    min-width: 1000px;
     height: min-content;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 40px;
-    border: solid black;
-    font-size: 35px;
-    padding: 20px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    border: solid black 3px;
+    border-radius: 5px;
+    font-size: 30px;
+    padding: 50px;
+}
+
+add-recipe-title-container{
+    font-weight: bold;
 }
 
 .recipe-input-element {
-    height: 60px;
+    height: 50px;
     display: flex;
     padding: 3%;
 }
 
 #recipe-text-input {
-    margin: 10px;
+    margin-top: -10px;
+    margin-left: 15px;
     flex: 1;
+    border: solid black 3px;
+    border-radius: 5px;
+    padding: 10px;
 }
 
-.recipe-input-container {
-    margin: 10px;
+.recipe-fieldset{
+    
+    
 }
 
 .add-recipe-button-container {
@@ -327,9 +339,10 @@ header {
 .recipe-title-container {
     text-align: center;
     font-size: 25px;
-    width: auto;
+    width: 60%;
+    min-width: 600px;
     height: min-content;
-    background-color: white;
+    background-color: beige;
     border: solid black 3px;
     margin-left: auto;
     margin-right: auto;
@@ -351,13 +364,13 @@ header {
 .recipe-description-container {
     width: auto;
     height: min-content;
-    background-color: white;
+    background-color: beige;
     margin: 25px;
     margin-left: auto;
     margin-right: auto;
     border: solid black 3px;
     border-radius: 5px;
-    padding: 10px;
+    padding: 50px;
 }
 
 .recipe-instructions-container {
@@ -368,8 +381,8 @@ header {
     border-radius: 5px;
     width: auto;
     height: min-content;
-    background-color:white;
-    font-weight: bold;
+    background-color:beige;
+    padding: 50px;
 }
 
 .recipe-instructions ul{
@@ -381,8 +394,9 @@ header {
     border: solid black 3px;
     border-radius: 5px;
     width: 350px;
+    min-width: 200px;
     height: min-content;
-    background-color: white;
+    background-color: beige;
     font-weight: bold;
     padding-left: 20px;
 }
@@ -396,10 +410,11 @@ header {
     border: solid black 3px;
     border-radius: 5px;
     width: 350px;
+    min-width: 200px;
     height: min-content;
-    background-color: white;
+    background-color: beige;
     font-weight: bold;
-    padding-left: 20px;
+    text-align: center;
 }
 
 h2, h1 {
@@ -420,7 +435,7 @@ h2, h1 {
     margin: auto;
     padding: 15px;
     border-radius: 5px;
-    background-color:white;
+    background-color:beige;
 }
 
 .comment{
@@ -429,7 +444,7 @@ h2, h1 {
     margin-right: auto;
     border: solid black 3px;
     border-radius: 5px;
-    background-color:white;
+    background-color:beige;
     line-height: 50px;
 }
 
@@ -438,30 +453,42 @@ h2, h1 {
 }
 
 .comment-post-container {
-  position: relative;
-  margin-top: 25px;
-  height: 150px;
+    position: relative;
+    margin-top: 25px;
+    height: 150px;
 }
 
 .comment-input {
-  width: 99%;
-  height: 100px;
-  border-radius: 5px;
-}
-textarea {
-  resize:none;
-  outline: none;
-  border: solid gray 1px
+    width: 82%;
+    margin: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    border: solid black 3px;
+    border-radius: 5px;
+    background-color:beige;
+    line-height: 100px;
+    padding-left: 30px;
+    font-size: 1.2em;
 }
 
+
 .post-button {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  height: 35px;
-  width: 80px;
-  border-radius: 5px;
-  outline: none;
+    position: absolute;
+    bottom: 30px;
+    right: 0;
+    height: 80px;
+    width: 10%;
+    background-color: beige;
+    color: rgb(83, 31, 31);
+    border: solid black 2px;
+    border-radius: 5px;
+    outline: none;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.post-button:hover {
+    background-color: lightgrey;
 }
 
 /* #################################################################################################################

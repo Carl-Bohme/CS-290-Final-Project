@@ -4,6 +4,10 @@
 
     <div class="add-recipe-body">
 
+      <div class="add-recipe-title-container">
+        <h1 class="add-recipe-title">Add Your Recipe</h1>
+      </div>
+
       <form method="post" action="/addRecipeToFile">
 
         <div class="recipe-input-element">
@@ -28,12 +32,12 @@
 
         <div class="recipe-input-element">
             <label for="recipe-ingredients-input">Ingredients:</label>
-            <input type="text" name='recipeIngredients' id="recipe-text-input" placeholder="Enter ingredients here..."></input>
+            <input type="text" name='recipeIngredients' id="recipe-text-input" placeholder="Separate with a comma and a space ( eg. &quot;,  &quot;)"></input>
         </div>
 
         <div class="recipe-input-element">
             <label for="recipe-instructions-input">Instructions:</label>
-            <input type="text" name='recipeInstructions' id="recipe-text-input" placeholder="Enter instructions here..."></input>
+            <input type="text" name='recipeInstructions' id="recipe-text-input" placeholder="Separate with a comma and a space ( eg. &quot;,  &quot;)"></input>
         </div>
 
         <div class="recipe-input-container">

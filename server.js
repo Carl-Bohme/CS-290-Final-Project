@@ -100,7 +100,7 @@ app.post('/search', function(req, res, next){
     var text_input = req.body.searchText;
     console.log("Your input is: " + text_input);
     //var search_result = [];
-    var sub = text_input.split(" ");
+    var sub = text_input.split(", ");
     var ingre_match = [];
     var match = 0;
     //var result_added = false;
@@ -162,10 +162,10 @@ app.post('/addRecipeToFile', function(req, res, next){
 	JSONItems = JSON.parse(fs.readFileSync('recipeData.json'));
 
 	ingredientsString = req.body.recipeIngredients;
-	ingredientsArray = ingredientsString.split(",");
+	ingredientsArray = ingredientsString.split(", ");
 
 	instructionsString = req.body.recipeInstructions;
-	instructionsArray = instructionsString.split(",");
+	instructionsArray = instructionsString.split(", ");
 
 
 	console.log("recipeDiet: " + req.body.recipeDietVegan);
