@@ -229,14 +229,14 @@ app.post('/addComment/:id', function(req, res, next){
 			if (err) throw err;
 			console.log('Data written to file');
 		});
+
+		//Reloads json file
+		recipeData = JSONItems;
+
 	}
 
-
-	//Reloads json file
-	recipeData = JSONItems;
-	
-	//Sends User back to home page
-	res.status(200).render('recipePage', recipeData[id]);
+	//Sends User back to recipe page
+	res.redirect('/'+id);
 	
 });
 
