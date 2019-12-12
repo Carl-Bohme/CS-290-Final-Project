@@ -42,7 +42,7 @@
         "rating": "",
         "percent": "",
         "time": "Medium",
-        "difficulty": "Meduim",
+        "difficulty": "Moderate",
         "vegetarian": "false",
         "vegan": "false",
         "id": "2"
@@ -138,7 +138,7 @@
         "rating": "",
         "percent": "",
         "time": "Long",
-        "difficulty": "Medium",
+        "difficulty": "Hard",
         "vegetarian": "false",
         "vegan": "false",
         "id": "8"
