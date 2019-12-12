@@ -42,10 +42,17 @@
         <div class = "recipe-comments-container">
           <h2>Comments</h2>
             <div class = "comment-post-container">
-              <form action = "/addComment/{{id}}" class = "comment-form">
+
+              <form method="post" action = "/addComment/{{id}}" class="comment-form">
+
                 <input class="comment-input" name="commentInput" placeholder="Enter a comment!"></input>
-                <button class="post-button">Post</button>
+
+                <div class="add-comment-button-container">
+                  <input id="create-comment" class="post-button" type="submit" value="Post" />
+                </div>
+
               </form>
+
             </div>
             {{#each comments as |item i|}}
                <div class="comment">
