@@ -123,7 +123,7 @@ app.post('/search', function(req, res, next){
 				}
 			}
 
-            ingre_match.push((parseFloat(match) / parseFloat(recipeData[i].ingredients.length) * 100));
+            ingre_match.push(Math.floor((parseFloat(match) / parseFloat(recipeData[i].ingredients.length) * 100)));
         }
 
 
