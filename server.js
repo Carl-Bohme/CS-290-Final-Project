@@ -168,6 +168,17 @@ app.post('/addRecipeToFile', function(req, res, next){
 	instructionsArray = instructionsString.split(",");
 
 
+	console.log("recipeDiet: " + req.body.recipeDietVegan);
+	console.log("recipeDiet: " + req.body.recipeDietVegetarian);
+	var vegan = "false";
+	if(req.body.recipeDietVegan == "Vegan"){
+		vegan = "true"
+	}
+	var vegetarian = "false";
+	if(req.body.recipeDietVegetarian == "Vegetarian"){
+		vegetarian = "true"
+	}
+
 	var newRecipeData = {
 		"name": req.body.recipeName,
 		"photoURL": req.body.recipePhotoURL,
@@ -178,10 +189,10 @@ app.post('/addRecipeToFile', function(req, res, next){
 		"comments": [],
 		"rating": "",
 		"percent": "",
-		"time": "Short",
-		"difficulty": "Moderate",
-		"vegetarian": "false",
-		"vegan": "false",
+		"time": req.body.recipeTime,
+		"difficulty": req.body.recipeDifficulty,
+		"vegetarian": vegetarian,
+		"vegan": vegan,
 		"id": JSONItems.length
 	};
 
@@ -201,6 +212,18 @@ app.post('/addRecipeToFile', function(req, res, next){
 	//recipeData[recipeData.length[newRecipeData]];
 
 	//Sends User back to home page
+	res.status(200).render('homePage');
+});
+
+app.post('/addComment/:id', function(req, res, next){
+	//var id = Math.floor(req.params.id); //Saves id entered in url rounded down if float
+		
+	var JSONItems = [];
+	JSONItems = JSON.parse(fs.readFileSync('recipeData.json'));
+	console.log(JSONItems[id].comments[JSONItems[id].comments.length-1]);
+	console.log(req.body.commentInput);
+	JSONItems[id].comments[JSONItems[id].comments.length] = req.body.commentInput;
+
 	res.status(200).render('homePage');
 });
 
