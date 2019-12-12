@@ -208,7 +208,7 @@ app.post('/addRecipeToFile', function(req, res, next){
 	});
 
 	//Reloads json file
-	//recipeData[recipeData.length[newRecipeData]];
+	recipeData = JSONItems;
 
 	//Sends User back to home page
 	res.status(200).render('homePage');
@@ -230,8 +230,14 @@ app.post('/addComment/:id', function(req, res, next){
 			console.log('Data written to file');
 		});
 	}
+
+
+	//Reloads json file
+	recipeData = JSONItems;
+	
 	//Sends User back to home page
 	res.status(200).render('recipePage', recipeData[id]);
+	
 });
 
 // Middleware function to handle requests not dealt with above
