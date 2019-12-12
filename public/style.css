@@ -328,7 +328,7 @@ header {
     text-align: center;
     font-size: 25px;
     width: auto;
-    height: auto;
+    height: min-content;
     background-color: white;
     border: solid black 3px;
     margin-left: auto;
@@ -350,7 +350,7 @@ header {
 
 .recipe-description-container {
     width: auto;
-    height: auto;
+    height: min-content;
     background-color: white;
     margin: 25px;
     margin-left: auto;
@@ -367,7 +367,7 @@ header {
     border: solid black 3px;
     border-radius: 5px;
     width: auto;
-    height: auto;
+    height: min-content;
     background-color:white;
     font-weight: bold;
 }
