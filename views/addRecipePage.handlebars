@@ -4,62 +4,69 @@
 
     <div class="add-recipe-body">
 
+      <form method="post" action="/addRecipeToFile">
+
         <div class="recipe-input-element">
             <label for="recipe-name-input">Name of Recipe:</label>
-            <input type="text" id="recipe-text-input"></input>
+            <input type="text" name='recipeName' id="recipe-text-input" placeholder="Enter name of recipe here..."></input>
         </div>
 
         <div class="recipe-input-element">
             <label for="recipe-short-description-input">Short Recipe Description:</label>
-            <input type="text" id="recipe-text-input"></input>
+            <input type="text" name='recipeShortDescription' id="recipe-text-input" placeholder="Enter short despription here..."></input>
         </div>
 
         <div class="recipe-input-element">
             <label for="recipe-long-description-input">Item description:</label>
-            <input type="text" id="recipe-text-input"></input>
+            <input type="text" name='recipelongDescription' id="recipe-text-input" placeholder="Enter full description here..."></input>
+        </div>
+
+        <div class="recipe-input-element">
+            <label for="recipe-photoURL-input">Image URL:</label>
+            <input type="text" name='recipePhotoURL' id="recipe-text-input" placeholder="Enter full description here..."></input>
         </div>
 
         <div class="recipe-input-element">
             <label for="recipe-ingredients-input">Ingredients:</label>
-            <input type="text" id="recipe-text-input"></input>
+            <input type="text" name='recipeIngredients' id="recipe-text-input" placeholder="Enter ingredients here..."></input>
         </div>
 
         <div class="recipe-input-element">
             <label for="recipe-instructions-input">Instructions:</label>
-            <input type="text" id="recipe-text-input"></input>
+            <input type="text" name='recipeInstructions' id="recipe-text-input" placeholder="Enter instructions here..."></input>
         </div>
 
         <div class="recipe-input-container">
-          <fieldset id="recipe-time" class="recipe-fieldset">
+          <fieldset id="recipe-time-field" class="recipe-fieldset">
             <legend>Length of Time</legend>
             <div>
-              <input type="radio" name="recipe-time" id="recipe-time-short" value="short">
+              <input type="radio" name="recipe-time" id="recipe-time-short" value="Short">
               <label for="recipe-time-short">Short</label>
             </div>
             <div>
-              <input type="radio" name="recipe-time" id="recipe-time-medium" value="medium">
+              <input type="radio" name="recipe-time" id="recipe-time-medium" value="Medium">
               <label for="recipe-time-medium">Medium</label>
             </div>
             <div>
-              <input type="radio" name="recipe-time" id="recipe-time-long" value="long">
+              <input type="radio" name="recipe-time" id="recipe-time-long" value="Long">
               <label for="recipe-time-long">Long</label>
             </div>
           </fieldset>
         </div>
 
         <div class="recipe-input-container">
-          <fieldset id="recipe-difficulty" class="recipe-fieldset">
+          <fieldset id="recipe-difficulty-field" class="recipe-fieldset">
             <legend>Length of Time</legend>
             <div>
-              <input type="radio" name="recipe-difficulty" id="recipe-difficulty-easy" value="easy">
+              <input type="radio" name="recipe-difficulty" id="recipe-difficulty-easy" value="Easy">
               <label for="recipe-difficulty-easy">Easy</label>
             </div>
             <div>
-              <input type="radio" name="recipe-difficulty" id="recipe-difficulty-medium" value="medium">
-              <label for="recipe-difficulty-medium">Medium</label>
+              <input type="radio" name="recipe-difficulty" id="recipe-difficulty-medium" value="Moderate">
+              <label for="recipe-difficulty-medium">Moderate</label>
             </div>
             <div>
-              <input type="radio" name="recipe-difficulty" id="recipe-difficulty-hard" value="hard">
+              <input type="radio" name="recipe-difficulty" id="recipe-difficulty-hard" value="Hard">
               <label for="recipe-difficulty-hard">Hard</label>
             </div>
           </fieldset>
@@ -80,8 +87,10 @@
         </div>
 
         <div class="add-recipe-button-container">
-          <button type="button" class="add-recipe-button">Post Recipe</button> 
+          <input id="create-recipe" class="add-recipe-button" type="submit" value="Post Recipe" />
         </div>
+
+      </form>
 
     </div>
 

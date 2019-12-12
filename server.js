@@ -51,6 +51,7 @@ function bubbleSort(arr1, arr2){
 }
 
 
+
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
 
@@ -153,6 +154,54 @@ app.post('/search', function(req, res, next){
         	})
     }
 
+});
+
+app.post('/addRecipeToFile', function(req, res, next){
+
+	var JSONItems = [];
+	JSONItems = JSON.parse(fs.readFileSync('recipeData.json'));
+
+	ingredientsString = req.body.recipeIngredients;
+	ingredientsArray = ingredientsString.split(",");
+
+	instructionsString = req.body.recipeInstructions;
+	instructionsArray = instructionsString.split(",");
+
+
+	var newRecipeData = {
+		"name": req.body.recipeName,
+		"photoURL": req.body.recipePhotoURL,
+		"shortDescription": req.body.recipeShortDescription,
+		"longDescription": req.body.recipelongDescription,
+		"ingredients": ingredientsArray,
+		"instructions": instructionsArray,
+		"comments": [],
+		"rating": "",
+		"percent": "",
+		"time": "Short",
+		"difficulty": "Moderate",
+		"vegetarian": "false",
+		"vegan": "false",
+		"id": JSONItems.length
+	};
+
+	JSONItems.push(newRecipeData);
+
+	var allRecipeData = JSON.stringify(JSONItems);
+	console.log(JSONItems);
+	
+
+	fs.writeFile('recipeData.json', allRecipeData, (err) => {
+		if (err) throw err;
+		console.log('Data written to file');
+	});
+
+
+	//Reloads json file
+	//recipeData[recipeData.length[newRecipeData]];
+
+	//Sends User back to home page
+	res.status(200).render('homePage');
 });
 
 // Middleware function to handle requests not dealt with above

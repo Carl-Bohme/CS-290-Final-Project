@@ -41,6 +41,12 @@
 
         <div class = "recipe-comments-container">
           <h2>Comments</h2>
+            <div class = "comment-post-container">
+              <form action = {{id}} class = "comment-form">
+                <textarea class = "comment-input" placeholder = "Enter a comment!"></textarea>
+                <button class = "post-button"> Post </button>
+              </form>
+            </div>
             {{#each comments as |item i|}}
                <div class="comment">
                  <span class="comment-content">{{this}}</span>
