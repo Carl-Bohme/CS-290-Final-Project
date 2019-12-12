@@ -207,7 +207,6 @@ app.post('/addRecipeToFile', function(req, res, next){
 		console.log('Data written to file');
 	});
 
-
 	//Reloads json file
 	//recipeData[recipeData.length[newRecipeData]];
 
@@ -216,15 +215,23 @@ app.post('/addRecipeToFile', function(req, res, next){
 });
 
 app.post('/addComment/:id', function(req, res, next){
-	//var id = Math.floor(req.params.id); //Saves id entered in url rounded down if float
-		
-	var JSONItems = [];
-	JSONItems = JSON.parse(fs.readFileSync('recipeData.json'));
-	console.log(JSONItems[id].comments[JSONItems[id].comments.length-1]);
-	console.log(req.body.commentInput);
-	JSONItems[id].comments[JSONItems[id].comments.length] = req.body.commentInput;
+	var id = Math.floor(req.params.id);
 
-	res.status(200).render('homePage');
+	if(req.body.commentInput != ""){
+		var JSONItems = [];
+		JSONItems = JSON.parse(fs.readFileSync('recipeData.json'));
+
+		JSONItems[id].comments[JSONItems[id].comments.length] = req.body.commentInput;
+		
+		var allRecipeData = JSON.stringify(JSONItems);
+
+		fs.writeFile('recipeData.json', allRecipeData, (err) => {
+			if (err) throw err;
+			console.log('Data written to file');
+		});
+	}
+	//Sends User back to home page
+	res.status(200).render('recipePage', recipeData[id]);
 });
 
 // Middleware function to handle requests not dealt with above
